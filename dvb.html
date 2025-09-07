@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Class 9 Python Programs (2025-26)</title>
+
+  <!-- Highlight.js CSS (CDN) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+
+  <style>
+    :root{
+      --bg:#f6f8fa; --card:#ffffff; --accent:#0b6cff; --text:#222;
+      --muted:#666;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, Arial; margin:0; background:var(--bg); color:var(--text);}
+    header{background:var(--accent); color:white; padding:26px 18px; text-align:center}
+    header h1{margin:0; font-size:20px}
+    header p{margin:6px 0 0; color:rgba(255,255,255,0.9)}
+    nav{padding:10px; text-align:center; background:#0f63e8}
+    nav a{color:white; margin:4px 6px; text-decoration:none; font-weight:600}
+    .container{max-width:980px; margin:20px auto; padding:0 16px}
+    .card{background:var(--card); border-radius:10px; padding:18px; margin-bottom:16px;
+          box-shadow:0 6px 18px rgba(20,20,50,0.06)}
+    details summary{cursor:pointer; font-size:16px; font-weight:700; padding:8px 0}
+    .meta{color:var(--muted); font-size:13px; margin-bottom:8px}
+    pre{margin:10px 0 0; border-radius:8px; overflow:auto; padding:12px; background:#f3f6fb}
+    .code-wrap{position:relative}
+    .copy-btn{
+      position:absolute; right:10px; top:10px;
+      background:var(--accent); color:white; border:none; padding:6px 8px; border-radius:6px;
+      font-size:13px; cursor:pointer;
+    }
+    footer{padding:18px; text-align:center; color:var(--muted); font-size:13px}
+    @media (max-width:600px){
+      header h1{font-size:18px}
+      .copy-btn{padding:6px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Class 9 Python Programs — 2025-26</h1>
+    <p>21 Example programs — copy code, view offline, or publish online</p>
+  </header>
+
+  <nav>
+    <!-- Quick links -->
+    <a href="#program1">1</a><a href="#program2">2</a><a href="#program3">3</a>
+    <a href="#program4">4</a><a href="#program5">5</a><a href="#program6">6</a>
+    <a href="#program7">7</a><a href="#program8">8</a><a href="#program9">9</a>
+    <a href="#program10">10</a><a href="#program11">11</a><a href="#program12">12</a>
+    <a href="#program13">13</a><a href="#program14">14</a><a href="#program15">15</a>
+    <a href="#program16">16</a><a href="#program17">17</a><a href="#program18">18</a>
+    <a href="#program19">19</a><a href="#program20">20</a><a href="#program21">21</a>
+  </nav>
+
+  <main class="container">
+
+    <!-- Example program card: Repeat this pattern for all programs -->
+    <section class="card" id="program1">
+      <div class="meta">Program 1 — Net Run Rate Calculator</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn" aria-label="Copy code">Copy</button>
+          <pre><code class="language-python">runs_scored = int(input("Enter total runs scored: "))
+overs_faced = float(input("Enter overs faced: "))
+runs_conceded = int(input("Enter runs conceded: "))
+overs_bowled = float(input("Enter overs bowled: "))
+
+nrr = (runs_scored/overs_faced) - (runs_conceded/overs_bowled)
+print("Net Run Rate:", round(nrr, 3))</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program2">
+      <div class="meta">Program 2 — Character Type Checker</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">ch = input("Enter a character: ")
+if ch.isupper():
+    print("Uppercase Letter")
+elif ch.islower():
+    print("Lowercase Letter")
+elif ch.isdigit():
+    print("Digit")
+else:
+    print("Special Character")</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program3">
+      <div class="meta">Program 3 — Maximum of Three Numbers</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+c = int(input("Enter third number: "))
+print("Maximum number is:", max(a,b,c))</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program4">
+      <div class="meta">Program 4 — Power Consumption Bill</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">units = int(input("Enter units consumed: "))
+if units <= 100:
+    amt = units * 1
+elif units <= 300:
+    amt = 100 + (units - 100) * 1.25
+elif units <= 500:
+    amt = 350 + (units - 300) * 1.5
+else:
+    amt = 650 + (units - 500) * 1.75
+print("Amount to be paid: Rs.", amt)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program5">
+      <div class="meta">Program 5 — Armstrong Number Checker</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+s = sum(int(d)**len(str(n)) for d in str(n))
+if s == n:
+    print("Armstrong Number")
+else:
+    print("Not Armstrong Number")</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program6">
+      <div class="meta">Program 6 — Armstrong Numbers (1 to 99999)</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">for n in range(1, 100000):
+    s = sum(int(d)**len(str(n)) for d in str(n))
+    if s == n:
+        print(n)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program7">
+      <div class="meta">Program 7 — Multiplication Table</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+for i in range(1, 11):
+    print(n, "x", i, "=", n*i)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program8">
+      <div class="meta">Program 8 — Leap Year Checker</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">year = int(input("Enter year: "))
+if (year%400==0) or (year%4==0 and year%100!=0):
+    print("Leap Year")
+else:
+    print("Not Leap Year")</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program9">
+      <div class="meta">Program 9 — Character Frequency Counter</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">s = input("Enter string: ")
+freq = {}
+for ch in s:
+    freq[ch] = freq.get(ch,0)+1
+print("Character Frequency:", freq)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program10">
+      <div class="meta">Program 10 — Vowel Counter</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">s = input("Enter string: ")
+vowels = "aeiouAEIOU"
+count = sum(1 for ch in s if ch in vowels)
+print("Number of vowels:", count)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program11">
+      <div class="meta">Program 11 — Factorial</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+fact = 1
+for i in range(1,n+1):
+    fact *= i
+print("Factorial:", fact)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program12">
+      <div class="meta">Program 12 — Reverse Integer</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+rev = int(str(n)[::-1])
+print("Reversed:", rev)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program13">
+      <div class="meta">Program 13 — Palindrome Number Checker</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = input("Enter a number: ")
+if n == n[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program14">
+      <div class="meta">Program 14 — Fibonacci Sequence</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter terms: "))
+a, b = 0, 1
+for i in range(n):
+    print(a, end=" ")
+    a, b = b, a+b</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program15">
+      <div class="meta">Program 15 — Print Patterns</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = 5
+for i in range(1, n+1):
+    print("*"*i)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program16">
+      <div class="meta">Program 16 — Sum of Digits</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+s = sum(int(d) for d in str(n))
+print("Sum of digits:", s)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program17">
+      <div class="meta">Program 17 — Sum of First N Natural Numbers</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter N: "))
+print("Sum:", n*(n+1)//2)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program18">
+      <div class="meta">Program 18 — LCM of Two Numbers</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">import math
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+lcm = abs(a*b)//math.gcd(a,b)
+print("LCM:", lcm)</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program19">
+      <div class="meta">Program 19 — HCF of Two Numbers</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">import math
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("HCF:", math.gcd(a,b))</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program20">
+      <div class="meta">Program 20 — Prime Number Checker</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">n = int(input("Enter a number: "))
+if n > 1:
+    for i in range(2, int(n**0.5)+1):
+        if n % i == 0:
+            print("Not Prime")
+            break
+    else:
+        print("Prime Number")
+else:
+    print("Not Prime")</code></pre>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" id="program21">
+      <div class="meta">Program 21 — Prime Numbers in a Range</div>
+      <details>
+        <summary>Show code</summary>
+        <div class="code-wrap">
+          <button class="copy-btn">Copy</button>
+          <pre><code class="language-python">start = int(input("Enter start: "))
+end = int(input("Enter end: "))
+for n in range(start, end+1):
+    if n > 1:
+        for i in range(2, int(n**0.5)+1):
+            if n % i == 0:
+                break
+        else:
+            print(n, end=" ")</code></pre>
+        </div>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>Tip: Click “Copy” then paste into your Python editor or an online REPL (replit.com).</div>
+  </footer>
+
+  <!-- Highlight.js and copy button script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script>
+    // Copy button behaviour
+    document.querySelectorAll('.code-wrap').forEach(function(wrapper){
+      const btn = wrapper.querySelector('.copy-btn');
+      const codeEl = wrapper.querySelector('code');
+      btn.addEventListener('click', async function(){
+        try {
+          await navigator.clipboard.writeText(codeEl.innerText);
+          btn.textContent = 'Copied';
+          setTimeout(()=> btn.textContent = 'Copy', 1500);
+        } catch(err){
+          alert('Copy failed — select and copy manually.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
